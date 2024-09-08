@@ -37,7 +37,7 @@ function App() {
         onSubmit={(e) => {
           e.preventDefault();
 
-          setItems([...items, { name: e.target[0].value }]);
+          setItems([...items, { name: e.target[0].value, id: Math.random() }]);
         }}
         className="border-1 mb-4 flex border-black bg-red-500"
       >
@@ -57,6 +57,16 @@ function App() {
               key={item.id}
               text={item.name}
               completed={item.completed}
+              onUpdate={(completed) => {
+                setItems(
+                  [...items].map((itm) => {
+                    if (item.id === itm.id) {
+                      itm.completed = completed;
+                    }
+                    return itm;
+                  })
+                );
+              }}
             />
           );
         })}
