@@ -20,9 +20,9 @@ function App() {
   return (
     <div className="w-1/2 container mx-auto my-20">
       <div className="flex justify-between between mb-10">
-        <Menu className="red-500" color="black" size={24} />
+        <Menu className="red-500" color="white" size={24} />
         <h1>Todo List</h1>
-        <Filter className="red-500" color="black" size={24} />
+        <Filter className="red-500" color="white" size={24} />
       </div>
       <form
         onSubmit={(e) => {

@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { Ellipsis } from "lucide-react";
+import { Delete, Ellipsis, Trash2 } from "lucide-react";
 import { useState } from "react";
 
 const TodoItem = ({ text, completed, onUpdate, onDelete }) => {
@@ -18,12 +18,12 @@ const TodoItem = ({ text, completed, onUpdate, onDelete }) => {
         {text}
       </p>
       <button>
-        <Ellipsis
+        <Trash2
           onClick={() => {
             onDelete();
           }}
           className="red-500"
-          color="black"
+          color="red"
           size={24}
         />
       </button>
