@@ -57,6 +57,17 @@ function App() {
               key={item.id}
               text={item.name}
               completed={item.completed}
+              onDelete={() => {
+                setItems(
+                  [...items].filter((itm) => {
+                    if (itm.id === item.id) {
+                      return false;
+                    } else {
+                      return true;
+                    }
+                  })
+                );
+              }}
               onUpdate={(completed) => {
                 setItems(
                   [...items].map((itm) => {

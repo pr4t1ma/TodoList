@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { Ellipsis } from "lucide-react";
 import { useState } from "react";
 
-const TodoItem = ({ text, completed, onUpdate }) => {
+const TodoItem = ({ text, completed, onUpdate, onDelete }) => {
   const [isComplete, setIsComplete] = useState(completed);
   return (
     <div className="flex gap-4  border border-gray-200 py-2 px-4">
@@ -18,7 +18,14 @@ const TodoItem = ({ text, completed, onUpdate }) => {
         {text}
       </p>
       <button>
-        <Ellipsis className="red-500" color="black" size={24} />
+        <Ellipsis
+          onClick={() => {
+            onDelete();
+          }}
+          className="red-500"
+          color="black"
+          size={24}
+        />
       </button>
     </div>
   );
