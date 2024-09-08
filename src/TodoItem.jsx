@@ -5,7 +5,7 @@ import { useState } from "react";
 const TodoItem = ({ text, completed, onUpdate, onDelete }) => {
   const [isComplete, setIsComplete] = useState(completed);
   return (
-    <div className="flex gap-4  border border-gray-200 py-2 px-4">
+    <div className="flex gap-4  border border-gray-600 py-2 px-4 mb-2">
       <input
         onChange={(e) => {
           setIsComplete(e.target.checked);
@@ -23,7 +23,7 @@ const TodoItem = ({ text, completed, onUpdate, onDelete }) => {
             onDelete();
           }}
           className="red-500"
-          color="red"
+          color="#f88"
           size={24}
         />
       </button>

@@ -18,7 +18,7 @@ function App() {
   }, [items]);
 
   return (
-    <div className="w-1/2 container mx-auto my-20">
+    <div className="max-w-screen-sm container mx-auto my-10 px-4">
       <div className="flex justify-between between mb-10">
         <Menu className="red-500" color="white" size={24} />
         <h1>Todo List</h1>
